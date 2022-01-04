@@ -1,0 +1,28 @@
+// Brute force pattern searching using
+
+
+#include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int main() {
+ string str = "abcdefghidef";
+ string pattern = "def";
+
+ int m = str.length();
+ int n = pattern.length();
+
+ for(int i=0;i<=m-n;i++){
+    int j = 0;
+	while(str[i]==pattern[j] && j<n){
+		i++;
+		j++;	
+	}
+   if(j==n){		  
+		 cout<<"pattern matched at"<<i -  j<<endl;
+	 }
+ }
+
+	return 0;
+}
